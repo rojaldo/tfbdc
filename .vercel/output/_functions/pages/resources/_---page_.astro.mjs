@@ -1,0 +1,32 @@
+import { c as createComponent, r as renderTemplate, a as renderComponent, b as createAstro, m as maybeRenderHead } from '../../chunks/astro/server_DF5EZgvI.mjs';
+import 'kleur/colors';
+import { $ as $$DefaultLayout } from '../../chunks/DefaultLayout_CENBkUAR.mjs';
+export { renderers } from '../../renderers.mjs';
+
+const $$Astro = createAstro();
+async function getStaticPaths({ paginate }) {
+  return paginate([], { pageSize: 1 });
+}
+const $$ = createComponent(($$result, $$props, $$slots) => {
+  const Astro2 = $$result.createAstro($$Astro, $$props, $$slots);
+  Astro2.self = $$;
+  Astro2.props;
+  return renderTemplate`${renderComponent($$result, "DefaultLayout", $$DefaultLayout, { "title": "Resources", "description": "Useful resources for members of The Francis Bacon Debate Club to enhance their debating skills." }, { "default": ($$result2) => renderTemplate` ${maybeRenderHead()}<section class="my-12"> <div class="space-content container"> <h1>Resources</h1> <p class="text-2xl">
+Welcome to our resources page! Here you will find a collection of useful links and materials to help you enhance your debating skills and knowledge.
+</p> </div> </section> <section class="my-12"> <div class="container"> <h2 class="text-3xl">Debate Guides and Tips</h2> <ul class="list-disc pl-5"> <li><a href="https://www.idebate.org/debate-guides" target="_blank" rel="noopener noreferrer">iDebate - Debate Guides</a>: Comprehensive guides on various aspects of debating, including argumentation, rebuttal, and public speaking.</li> <li><a href="https://www.speechanddebate.org/resources/" target="_blank" rel="noopener noreferrer">National Speech & Debate Association - Resources</a>: A wide range of resources for debaters, including topic analyses, debate formats, and instructional videos.</li> <li><a href="https://debate.uvm.edu/dcpdf/greatdebatehandbook.pdf" target="_blank" rel="noopener noreferrer">The Great Debate Handbook</a>: A detailed handbook covering the fundamentals of debating, from preparation to delivery.</li> </ul> </div> </section> <section class="my-12"> <div class="container"> <h2 class="text-3xl">Recommended Reading</h2> <ul class="list-disc pl-5"> <li><a href="https://www.amazon.com/Thank-Argue-Convince-Essential-Persuading/dp/0385347758" target="_blank" rel="noopener noreferrer">Thank You for Arguing by Jay Heinrichs</a>: An insightful book on the art of persuasion and effective argumentation.</li> <li><a href="https://www.amazon.com/Debate-Book-Complete-Competitive-Debating/dp/041573444X" target="_blank" rel="noopener noreferrer">The Debater's Guide by Jon M. Ericson</a>: A comprehensive guide to competitive debating, covering techniques, strategies, and ethics.</li> <li><a href="https://www.amazon.com/Art-Debate-Guide-Competitive-Debating/dp/1585107579" target="_blank" rel="noopener noreferrer">The Art of Debate by N. André Cossette</a>: A practical guide to mastering the skills of debate, with tips on research, argumentation, and presentation.</li> </ul> </div> </section> <section class="my-12"> <div class="container"> <h2 class="text-3xl">Training Materials</h2> <ul class="list-disc pl-5"> <li><a href="https://www.youtube.com/user/DebateAcademy" target="_blank" rel="noopener noreferrer">Debate Academy - YouTube Channel</a>: A collection of instructional videos on various debate topics and techniques.</li> <li><a href="https://debate.uvm.edu/" target="_blank" rel="noopener noreferrer">World Debate Institute</a>: Resources and training materials for debaters of all levels, including workshops and online courses.</li> <li><a href="https://www.debatecentral.org/" target="_blank" rel="noopener noreferrer">Debate Central</a>: A hub for debate resources, including topic briefs, research guides, and instructional materials.</li> </ul> </div> </section> ` })}`;
+}, "/home/rojaldo/code/drake/accessible-astro-starter/src/pages/resources/[...page].astro", void 0);
+
+const $$file = "/home/rojaldo/code/drake/accessible-astro-starter/src/pages/resources/[...page].astro";
+const $$url = "/resources/[...page]";
+
+const _page = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+  __proto__: null,
+  default: $$,
+  file: $$file,
+  getStaticPaths,
+  url: $$url
+}, Symbol.toStringTag, { value: 'Module' }));
+
+const page = () => _page;
+
+export { page };
