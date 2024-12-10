@@ -1,0 +1,66 @@
+---
+import DefaultLayout from '../../layouts/DefaultLayout.astro'
+
+export async function getStaticPaths({ paginate }) {
+
+  return paginate([], { pageSize: 1 })
+}
+
+const { page } = Astro.props
+---
+
+<DefaultLayout
+  title="About Us"
+  description="Learn more about The Francis Bacon Debate Club, our mission, history, and team."
+>
+  <section class="my-12">
+    <div class="space-content container">
+      <h1>About Us</h1>
+      <p class="text-2xl">
+        Welcome to The Francis Bacon Debate Club, where we foster intellectual growth and the art of debate.
+      </p>
+    </div>
+  </section>
+  <section class="my-12">
+    <div class="container">
+      <h2 class="text-3xl">Our Mission</h2>
+      <p class="text-lg">
+        At The Francis Bacon Debate Club, our mission is to cultivate a community of critical thinkers and eloquent speakers. We aim to provide a platform for individuals to engage in meaningful discussions, develop their public speaking skills, and broaden their perspectives on various topics.
+      </p>
+    </div>
+  </section>
+  <section class="my-12">
+    <div class="container">
+      <h2 class="text-3xl">Our History</h2>
+      <p class="text-lg">
+        Founded in [Year], The Francis Bacon Debate Club has a rich history of promoting intellectual discourse and debate. Named after the renowned philosopher and statesman Francis Bacon, our club embodies his spirit of inquiry and pursuit of knowledge. Over the years, we have hosted numerous debates, workshops, and events that have inspired and challenged our members.
+      </p>
+    </div>
+  </section>
+  <section class="my-12">
+    <div class="container">
+      <h2 class="text-3xl">Our Team</h2>
+      <p class="text-lg">
+        Our club is led by a dedicated team of individuals who are passionate about debate and education. Meet our leadership team:
+      </p>
+      <ul class="list-disc pl-5">
+        <li><strong>President:</strong> [Name]</li>
+        <li><strong>Vice President:</strong> [Name]</li>
+        <li><strong>Secretary:</strong> [Name]</li>
+        <li><strong>Treasurer:</strong> [Name]</li>
+        <li><strong>Event Coordinator:</strong> [Name]</li>
+      </ul>
+    </div>
+  </section>
+  <section class="my-12">
+    <div class="container">
+      <h2 class="text-3xl">Join Us</h2>
+      <p class="text-lg">
+        We welcome new members who share our passion for debate and intellectual growth. Whether you are an experienced debater or just starting, The Francis Bacon Debate Club offers a supportive and stimulating environment for you to develop your skills and engage with like-minded individuals.
+      </p>
+      <p class="text-lg">
+        To join us, please visit our <a href="/membership">Membership</a> page for more information.
+      </p>
+    </div>
+  </section>
+</DefaultLayout>

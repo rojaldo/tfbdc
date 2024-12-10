@@ -9,10 +9,12 @@ const { src = '/astronaut-hero-img.webp' } = Astro.props
     <div class="grid grid-cols-1 items-center gap-24 lg:grid-cols-2">
       <div class="flex flex-col items-center gap-8 md:items-start">
         <h1 class="text-center text-6xl md:text-left lg:text-8xl">
-          <slot><span class="text-gradient">Accessible</span> Starter for Astro</slot>
+          <slot><span class="handwritten">The </span></slot> <br>
+          <slot><span class="handwritten">Francis Bacon</span></slot> <br>
+          <slot><span class="handwritten">Debate Club </span></slot>
         </h1>
         <div class="flex flex-col gap-3 min-[500px]:flex-row">
-          <a class="button has-icon" href="https://github.com/markteekman/accessible-astro-starter">
+          <!-- <a class="button has-icon" href="https://github.com/markteekman/accessible-astro-starter">
             <Icon name="ion:star-outline" />
             Star on GitHub
           </a>
@@ -22,7 +24,7 @@ const { src = '/astronaut-hero-img.webp' } = Astro.props
           >
             <Icon name="ion:bookmark-outline" />
             Read the Docs
-          </a>
+          </a> -->
         </div>
       </div>
       <img class="hidden lg:block" src={src} alt="" decoding="async" />
@@ -31,6 +33,7 @@ const { src = '/astronaut-hero-img.webp' } = Astro.props
 </section>
 
 <style lang="scss">
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
   .text-gradient {
     background: linear-gradient(315deg, var(--primary-200) 25%, var(--secondary-500));
     background-clip: border-box;
@@ -43,5 +46,9 @@ const { src = '/astronaut-hero-img.webp' } = Astro.props
     background-clip: border-box;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+  }
+
+  .handwritten {
+    font-family: 'Great Vibes', brush-script, cursive;
   }
 </style>
