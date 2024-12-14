@@ -1,12 +1,14 @@
 ---
 import DefaultLayout from '../../layouts/DefaultLayout.astro'
+import debates from '../../assets/json/debates.json'
+
 
 export async function getStaticPaths({ paginate }) {
-
-return paginate([], { pageSize: 1 })
+  return paginate([], { pageSize: 1 })
 }
 
 const { page } = Astro.props
+const { currentDebate, previousDebates } = debates
 ---
 
 <DefaultLayout
@@ -23,56 +25,70 @@ const { page } = Astro.props
   </section>
   <section class="my-12">
     <div class="container">
-      <h2 class="text-3xl">Upcoming Events</h2>
-      <div class="my-8">
-        <h3 class="text-2xl">Debate on Climate Change Policies</h3>
+      <h2 class="text-3xl">Current Debate</h2>
+      <div class="my-8 p-6 border rounded-lg shadow-lg">
+        <h3 class="text-2xl">{ currentDebate.title }</h3>
         <p class="text-lg">
-          Date: [Date] <br>
-          Time: [Time] <br>
-          Location: [Location]
+          Date: { currentDebate.date } <br>
+          Time: { currentDebate.time } <br>
+          Location: { currentDebate.location }
         </p>
         <p class="text-lg">
-          Join us for a heated debate on the effectiveness of current climate change policies. Are governments doing enough to combat climate change, or are more drastic measures needed? Come and share your views on this critical issue.
-        </p>
-      </div>
-      <div class="my-8">
-        <h3 class="text-2xl">The Impact of Social Media on Society</h3>
-        <p class="text-lg">
-          Date: [Date] <br>
-          Time: [Time] <br>
-          Location: [Location]
-        </p>
-        <p class="text-lg">
-          In this debate, we will explore the impact of social media on modern society. Does social media bring people together or drive them apart? How does it influence our perceptions and behaviors? Join us for an engaging discussion on the pros and cons of social media.
+          { currentDebate.description }
         </p>
       </div>
     </div>
   </section>
   <section class="my-12">
     <div class="container">
-      <h2 class="text-3xl">Past Events</h2>
-      <div class="my-8">
-        <h3 class="text-2xl">Debate on Universal Basic Income</h3>
-        <p class="text-lg">
-          Date: [Past Date] <br>
-          Time: [Past Time] <br>
-          Location: [Past Location]
-        </p>
-        <p class="text-lg">
-          This debate focused on the concept of Universal Basic Income (UBI). We discussed whether UBI is a viable solution to economic inequality and job displacement caused by automation. The arguments were passionate and thought-provoking, providing valuable insights into this complex issue.
-        </p>
-      </div>
-      <div class="my-8">
-        <h3 class="text-2xl">The Role of Technology in Education</h3>
-        <p class="text-lg">
-          Date: [Past Date] <br>
-          Time: [Past Time] <br>
-          Location: [Past Location]
-        </p>
-        <p class="text-lg">
-          In this event, we debated the role of technology in education. Is technology enhancing the learning experience, or is it creating new challenges for educators and students? The discussion covered various perspectives, highlighting the benefits and drawbacks of integrating technology into the classroom.
-        </p>
-      </div>
+      <h2 class="text-3xl">Previous Debates</h2>
+      <ul class="my-8 space-y-6">
+        {previousDebates.map(debate => (
+          <li class="p-6 border rounded-lg shadow-lg">
+            <h3 class="text-2xl">{ debate.title }</h3>
+            <p class="text-lg">
+              Date: { debate.date } <br>
+              Time: { debate.time } <br>
+              Location: { debate.location }
+            </p>
+            <p class="text-lg">
+              { debate.description }
+            </p>
+          </li>
+        ))}
+      </ul>
     </div>
   </section>
 </DefaultLayout>
+
+<style lang="scss">
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .border {
+    border: 1px solid #ddd;
+  }
+
+  .rounded-lg {
+    border-radius: 0.5rem;
+  }
+
+  .shadow-lg {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  }
+
+  .p-6 {
+    padding: 1.5rem;
+  }
+
+  .my-8 {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .space-y-6 > * + * {
+    margin-top: 1.5rem;
+  }
+</style>

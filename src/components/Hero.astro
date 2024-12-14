@@ -1,5 +1,6 @@
 ---
-import { Icon } from 'astro-icon/components'
+import 'animate.css';
+import Image from 'astro/components/Image.astro'
 
 const { src = '/astronaut-hero-img.webp' } = Astro.props
 ---
@@ -9,11 +10,12 @@ const { src = '/astronaut-hero-img.webp' } = Astro.props
     <div class="grid grid-cols-1 items-center gap-24 lg:grid-cols-2">
       <div class="flex flex-col items-center gap-8 md:items-start">
         <h1 class="text-center text-6xl md:text-left lg:text-8xl">
-          <slot><span class="handwritten">The </span></slot> <br>
-          <slot><span class="handwritten">Francis Bacon</span></slot> <br>
-          <slot><span class="handwritten">Debate Society </span></slot>
+          <!-- apply fade in and move left animation on load for these elements inside div -->
+           <div style = "animation-delay: 0.5s; animation-duration: 3.5s" class="handwritten animate__animated animate__fadeInDown">The</div>
+            <div style = "animation-delay: 0s; animation-duration: 4s" class="handwritten animate__animated animate__fadeInLeft">Francis Bacon</div>
+            <div style = "animation-delay: 0s; animation-duration: 4s" class="handwritten animate__animated animate__fadeInRight">Debate Society</div>
         </h1>
-        <div class="flex flex-col gap-3 min-[500px]:flex-row">
+        <div class="flex flex-col gap-3 min-[300px]:flex-row">
           <!-- <a class="button has-icon" href="https://github.com/markteekman/accessible-astro-starter">
             <Icon name="ion:star-outline" />
             Star on GitHub
@@ -27,7 +29,9 @@ const { src = '/astronaut-hero-img.webp' } = Astro.props
           </a> -->
         </div>
       </div>
-      <img class="hidden lg:block" src={src} alt="" decoding="async" />
+      <div style = "animation-delay: 0s; animation-duration: 4s" class="animate__animated animate__fadeInUp" >
+        <Image class="hidden lg:block" src={src} alt="" decoding="async" width={800} height={800} loading="eager" />
+      </div>
     </div>
   </div>
 </section>
@@ -51,4 +55,7 @@ const { src = '/astronaut-hero-img.webp' } = Astro.props
   .handwritten {
     font-family: 'Great Vibes', brush-script, cursive;
   }
+
+
 </style>
+

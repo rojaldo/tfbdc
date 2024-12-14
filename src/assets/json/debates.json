@@ -1,0 +1,32 @@
+{
+    "currentDebate": {
+      "title": "Debate on Climate Change Policies",
+      "date": "2023-11-15",
+      "time": "18:00",
+      "location": "Main Hall",
+      "description": "Join us for a heated debate on the effectiveness of current climate change policies. Are governments doing enough to combat climate change, or are more drastic measures needed? Come and share your views on this critical issue."
+    },
+    "previousDebates": [
+      {
+        "title": "The Impact of Social Media on Society",
+        "date": "2023-10-10",
+        "time": "17:00",
+        "location": "Conference Room A",
+        "description": "A discussion on how social media influences our daily lives, both positively and negatively."
+      },
+      {
+        "title": "The Future of Artificial Intelligence",
+        "date": "2023-09-05",
+        "time": "16:00",
+        "location": "Auditorium",
+        "description": "Exploring the advancements in AI and its potential impact on various industries."
+      },
+      {
+        "title": "Ethics in Modern Medicine",
+        "date": "2023-08-20",
+        "time": "15:00",
+        "location": "Lecture Hall 2",
+        "description": "Debating the ethical considerations in contemporary medical practices."
+      }
+    ]
+  }

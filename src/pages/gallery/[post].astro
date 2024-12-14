@@ -1,9 +1,13 @@
 ---
+import Image from 'astro/components/Image.astro'
 import DefaultLayout from '../../layouts/DefaultLayout.astro'
 import { Breadcrumbs, BreadcrumbsItem } from 'accessible-astro-components'
+import 'animate.css';
+
+import posts from '../../assets/json/gallery.json'
 
 export async function getStaticPaths() {
-  const data = await fetch('https://jsonplaceholder.typicode.com/posts').then((response) => response.json())
+  const data = posts;
 
   return data.map((post) => {
     return {
@@ -16,25 +20,26 @@ export async function getStaticPaths() {
 const { post } = Astro.props
 ---
 
-<DefaultLayout title={post.title} description={post.body} url={post.title}>
+<DefaultLayout title={post.title} description={post.body} url={post.title} image={post.image_url}>
   <div class="container">
     <div class="mt-12">
       <Breadcrumbs>
         <BreadcrumbsItem href="/" label="Home" />
-        <BreadcrumbsItem href="/blog" label="Blog" />
+        <BreadcrumbsItem href="/gallery" label="Gallery" />
         <BreadcrumbsItem currentPage={true} label={post.title} />
       </Breadcrumbs>
     </div>
   </div>
   <section class="my-12">
     <div class="container">
-      <h1>{post.title}</h1><br />
-      <p>By userId: {post.userId}</p>
+      <h1 style="animation-delay: 0s; animation-duration: 3s" class="animate__animated animate__fadeIn">{post.title}</h1><br />
+      <!-- <p>By userId: {post.userId}</p> -->
     </div>
   </section>
   <section class="my-12">
     <div class="container">
-      <p class="text-2xl">{post.body}</p>
+      <img src={'../'+post.image_url} alt={post.title} style="animation-delay: 0s; animation-duration: 2s" class="animate__animated animate__fadeIn"/>
+      <p style="animation-delay: 1s; animation-duration: 3s" class="text-2xl animate__animated animate__fadeIn">{post.body}</p>
     </div>
   </section>
 </DefaultLayout>

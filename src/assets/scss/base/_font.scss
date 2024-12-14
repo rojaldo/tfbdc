@@ -58,6 +58,73 @@
   font-display: swap;
 }
 
+// Great+Vibes
+@font-face {
+  font-family: 'Great Vibes';
+  src: local('Great Vibes Regular'), local('GreatVibes-Regular'), url('/fonts/GreatVibes-Regular.woff2') format('woff2'),
+    url('/fonts/GreatVibes-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+// similar font to Great Vibes
+@font-face {
+  font-family: 'Dancing Script';
+  src: local('Dancing Script Regular'), local('DancingScript-Regular'), url('/fonts/DancingScript-Regular.woff2') format('woff2'),
+    url('/fonts/DancingScript-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Pacifico';
+  src: local('Pacifico Regular'), local('Pacifico-Regular'), url('/fonts/Pacifico-Regular.woff2') format('woff2'),
+    url('/fonts/Pacifico-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Satisfy';
+  src: local('Satisfy Regular'), local('Satisfy-Regular'), url('/fonts/Satisfy-Regular.woff2') format('woff2'),
+    url('/fonts/Satisfy-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sacramento';
+  src: local('Sacramento Regular'), local('Sacramento-Regular'), url('/fonts/Sacramento-Regular.woff2') format('woff2'),
+    url('/fonts/Sacramento-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Alex Brush';
+  src: local('Alex Brush Regular'), local('AlexBrush-Regular'), url('/fonts/AlexBrush-Regular.woff2') format('woff2'),
+    url('/fonts/AlexBrush-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Parisienne';
+  src: local('Parisienne Regular'), local('Parisienne-Regular'), url('/fonts/Parisienne-Regular.woff2') format('woff2'),
+    url('/fonts/Parisienne-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+
 body {
   font-family: var(--font-family-default);
   text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px;
@@ -157,7 +224,7 @@ body {
       }
     }
 
-    line-height: 1.5rem;
+    // line-height: 1.5em;
 
     @include breakpoint(medium) {
       font-size: 1.125rem;

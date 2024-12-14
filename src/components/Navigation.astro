@@ -9,7 +9,7 @@ import logo from '../assets/img/logo.svg'
   <div class="container">
     <a href="/" class="flex items-center gap-2 !no-underline">
       <Image src={logo} alt="Your Logo" width="47" height="37" />
-      <span class="font-bold">The Francis Bacon Debate Society</span>
+      <span>The Francis Bacon Debate Society</span>
     </a>
     <div class="wrapper">
       <nav class="desktop-menu" aria-label="Main navigation desktop">
@@ -28,16 +28,18 @@ import logo from '../assets/img/logo.svg'
   </div>
 </div>
 
+
+
 <script>
   document.addEventListener('astro:page-load', () => {
     // variables
     const mainNav = document.querySelector('#main-navigation')
-    const mainMenu = mainNav.querySelector('ul')
+    const mainMenu = mainNav?.querySelector('ul')
     const dropdownMenus = [...document.querySelectorAll('.has-dropdown button')]
 
     // functions
     const setActiveMenuItem = () => {
-      const mobileDesktopMenus = mainNav.querySelectorAll('nav > ul')
+      const mobileDesktopMenus = mainNav?.querySelectorAll('nav > ul')
       const currenPathname = window.location.pathname
 
       mobileDesktopMenus.forEach((menu) => {
@@ -56,17 +58,17 @@ import logo from '../assets/img/logo.svg'
     }
 
     const checkMenuSize = () => {
-      const mainNavWidth = mainNav.getBoundingClientRect().width
-      const desktopMenuWidth = document.querySelector('.desktop-menu').getBoundingClientRect().width
+      const mainNavWidth = mainNav?.getBoundingClientRect().width
+      const desktopMenuWidth = mainNav?.querySelector('.desktop-menu')?.getBoundingClientRect().width
       const logoWidthBuffer = 300
       const totalMenuWidth = Math.round(desktopMenuWidth) + logoWidthBuffer
 
       if (totalMenuWidth >= mainNavWidth) {
-        mainNav.classList.remove('is-desktop')
-        mainNav.classList.add('is-mobile')
+        mainNav?.classList.remove('is-desktop')
+        mainNav?.classList.add('is-mobile')
       } else if (totalMenuWidth <= mainNavWidth) {
-        mainNav.classList.add('is-desktop')
-        mainNav.classList.remove('is-mobile')
+        mainNav?.classList.add('is-desktop')
+        mainNav?.classList.remove('is-mobile')
       }
     }
 
@@ -412,4 +414,5 @@ import logo from '../assets/img/logo.svg'
       }
     }
   }
+
 </style>
