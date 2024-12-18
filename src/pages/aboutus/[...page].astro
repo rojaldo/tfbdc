@@ -2,7 +2,6 @@
 import DefaultLayout from '../../layouts/DefaultLayout.astro'
 
 export async function getStaticPaths({ paginate }) {
-
   return paginate([], { pageSize: 1 })
 }
 
@@ -14,53 +13,83 @@ const { page } = Astro.props
   description="Learn more about The Francis Bacon Debate Society, our mission, history, and team."
 >
   <section class="my-12">
-    <div class="space-content container">
-      <h1>About Us</h1>
-      <p class="text-2xl">
-        Welcome to The Francis Bacon Debate Society, where we foster intellectual growth and the art of debate.
+    <div class="container">
+      <h1 class="text-4xl font-bold mb-6">About Us</h1>
+      <p class="text-lg mb-6">
+        The Francis Bacon Society is a space where the brightest minds from various fields come together to deliberate on important topics that have a purpose and lasting impact. Our society is composed of lawyers, ambassadors, scientists, entrepreneurs, senior executives, creatives, investors, philosophers, deans, and politicians, all united by a common goal: to find pragmatic solutions and chart a path of collective thinking.
+      </p>
+    </div>
+  </section>
+  <section class="my-12  py-12">
+    <div class="container">
+      <h2 class="text-3xl font-bold mb-6">How Do We Do It?</h2>
+      <p class="text-lg mb-6">
+        Through collaboration and the exchange of knowledge, our group of experts uses individual talent to achieve a superior collective intellect. We challenge ourselves and our limits, always seeking to provide valuable conclusions to society.
       </p>
     </div>
   </section>
   <section class="my-12">
     <div class="container">
-      <h2 class="text-3xl">Our Mission</h2>
-      <p class="text-lg">
-        At The Francis Bacon Debate Society, our mission is to cultivate a community of critical thinkers and eloquent speakers. We aim to provide a platform for individuals to engage in meaningful discussions, develop their public speaking skills, and broaden their perspectives on various topics.
+      <h2 class="text-3xl font-bold mb-6">Why Do We Do It?</h2>
+      <p class="text-lg mb-6">
+        To enhance our personal and collective intelligence and to offer society innovative and valuable solutions. We want our logo to inspire the use of the brain to challenge oneself and others, promoting critical and deep thinking.
       </p>
     </div>
   </section>
-  <section class="my-12">
+  <section class="my-12  py-12">
     <div class="container">
-      <h2 class="text-3xl">Our History</h2>
-      <p class="text-lg">
-        Founded in [Year], The Francis Bacon Debate Society has a rich history of promoting intellectual discourse and debate. Named after the renowned philosopher and statesman Francis Bacon, our society embodies his spirit of inquiry and pursuit of knowledge. Over the years, we have hosted numerous debates, workshops, and events that have inspired and challenged our members.
+      <h2 class="text-3xl font-bold mb-6">Our History</h2>
+      <p class="text-lg mb-6">
+        Founded in the year 2024, The Francis Bacon Debate Society stands as a beacon of intellectual discourse and the free exchange of ideas. Our society is dedicated to fostering a culture of rigorous debate, critical thinking, and eloquent expression.
       </p>
-    </div>
-  </section>
-  <section class="my-12">
-    <div class="container">
-      <h2 class="text-3xl">Our Team</h2>
-      <p class="text-lg">
-        Our club is led by a dedicated team of individuals who are passionate about debate and education. Meet our leadership team:
+      <p class="text-lg mb-6">
+        At the heart of our society lies a commitment to the highest values in debating. We believe that through respectful and informed debate, individuals can broaden their perspectives, challenge their preconceptions, and contribute to the collective wisdom of our community.
       </p>
-      <ul class="list-disc pl-5">
-        <li><strong>President:</strong> [Name]</li>
-        <li><strong>Vice President:</strong> [Name]</li>
-        <li><strong>Secretary:</strong> [Name]</li>
-        <li><strong>Treasurer:</strong> [Name]</li>
-        <li><strong>Event Coordinator:</strong> [Name]</li>
-      </ul>
-    </div>
-  </section>
-  <section class="my-12">
-    <div class="container">
-      <h2 class="text-3xl">Join Us</h2>
-      <p class="text-lg">
-        We welcome new members who share our passion for debate and intellectual growth. Whether you are an experienced debater or just starting, The Francis Bacon Debate Society offers a supportive and stimulating environment for you to develop your skills and engage with like-minded individuals.
-      </p>
-      <p class="text-lg">
-        To join us, please visit our <a href="/membership">Membership</a> page for more information.
+      <p class="text-lg mb-6">
+        Our members are encouraged to engage in thoughtful discussions on a wide range of topics, from contemporary issues to timeless philosophical questions. We uphold the principles of integrity, respect, and intellectual curiosity in all our endeavours.
       </p>
     </div>
   </section>
 </DefaultLayout>
+
+<style lang="scss">
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.bg-gray-100 {
+  background-color: #f7fafc;
+}
+
+.text-4xl {
+  font-size: 2.25rem;
+}
+
+.text-3xl {
+  font-size: 1.875rem;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.mb-6 {
+  margin-bottom: 1.5rem;
+}
+
+.my-12 {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.py-12 {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+</style>
