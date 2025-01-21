@@ -31,7 +31,7 @@ export async function getStaticPaths({ paginate }) {
   // load posts from assets/json/posts.json
   
   const data = posts;
-  return paginate(data, { pageSize: 6 })
+  return paginate(data, { pageSize: 14 })
 }
 
 const { page } = Astro.props as { page: Page }
@@ -48,13 +48,13 @@ const { page } = Astro.props as { page: Page }
       <!-- <ButtonSample client:visible/> -->
       <h1 style = "animation-delay: 1s; animation-duration: 2s" class="animate__animated animate__fadeIn">Gallery</h1>
       <p style = "animation-delay: 0.5s; animation-duration: 2s" class="text-2xl animate__animated animate__fadeIn">
-        This is the gallery showcasing photographs captured during our esteemed sessions.
+        This is the gallery of photographs from our sessions
       </p>
     </div>
   </section>
   <section class="my-12">
     <div class="container" >
-      <p style = "animation-delay: 2s; animation-duration: 2s" class="text-sm animate__animated animate__fadeIn"><em>Post {page.start + 1} through {page.end + 1} of {page.total} total posts</em></p>
+      <p style = "animation-delay: 2s; animation-duration: 2s" class="text-sm animate__animated animate__fadeIn"><em>Photograph {page.start + 1} through {page.end + 1} of {page.total} total photographs</em></p>
       <ul class="my-3">
         {
           page.data.map((post, index) => (
@@ -62,9 +62,9 @@ const { page } = Astro.props as { page: Page }
               <div style = "animation-delay: 0s; animation-duration: 2s" class={index % 2 === 0 ? 'lg:col-span-animate__animated animate__fadeInTopLeft' : 'lg:col-span-animate__animated animate__fadeInTopRight'}>
               <Card
                 url={'/gallery/' + post.title.replaceAll(' ', '-').toLowerCase()}
-                title={post.title}
-                footer={'userId:' + post.userId}
+                title=""
                 img={'../'+post.image_url}
+                footer={"Photograph " + (index + 1)}
                 
                 
               >
@@ -76,14 +76,14 @@ const { page } = Astro.props as { page: Page }
         }
       </ul>
       <div class="mt-12 grid place-content-center">
-        <Pagination
+        <!-- <Pagination
           firstPage={page.url.prev ? '/gallery' : null}
           previousPage={page.url.prev ? page.url.prev : null}
           nextPage={page.url.next ? page.url.next : null}
           lastPage={page.url.next ? `/gallery/${Math.round(page.total / page.size)}` : null}
           currentPage={page.currentPage}
           totalPages={Math.round(page.total / page.size)}
-        />
+        /> -->
       </div>
     </div>
   </section>

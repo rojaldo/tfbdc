@@ -1,7 +1,7 @@
 ---
 import DefaultLayout from '../../layouts/DefaultLayout.astro'
 import debates from '../../assets/json/debates.json'
-
+import 'animate.css';
 
 export async function getStaticPaths({ paginate }) {
   return paginate([], { pageSize: 1 })
@@ -15,47 +15,114 @@ const { currentDebate, previousDebates } = debates
   title="Events"
   description="Upcoming events and debates at The Francis Bacon Debate Society."
 >
-  <section class="my-12">
-    <div class="space-content container">
-      <h1>Events</h1>
-      <p class="text-2xl">
-        Join us for our upcoming events and debates. Engage in thought-provoking discussions and enhance your debating skills.
-      </p>
-    </div>
-  </section>
-  <section class="my-12">
-    <div class="container">
-      <h2 class="text-3xl">Current Debate</h2>
-      <div class="my-8 p-6 border rounded-lg shadow-lg">
-        <h3 class="text-2xl">{ currentDebate.title }</h3>
-        <p class="text-lg">
-          Date: { currentDebate.date } <br>
-          Time: { currentDebate.time } <br>
-          Location: { currentDebate.location }
-        </p>
-        <p class="text-lg">
-          { currentDebate.description }
-        </p>
-      </div>
-    </div>
-  </section>
+<section class="my-12">
+  <div class="space-content container">
+    <h1 style = "animation-delay: 0.5s; animation-duration: 2s" class="animate__animated animate__fadeIn">Events</h1>
+    <p style = "animation-delay: 1.5s; animation-duration: 4s" class="animate__animated animate__fadeIn text-2xl">
+      We attempt to engage in thought-provoking discussions that challenge cclass="onventional wisdom and explore diverse perspectives. Our debates seek to foster intellectual growth, refine our rhetorical skills, and achieve deeper understanding of complex issues. We adopt an Oxford Union-style format, paired with dinners, and under the Chatham House Rule to secure our individual confidentiality, still allowing us to share collective conclusions.    
+    </p>
+    <p style = "animation-delay: 1.5s; animation-duration: 4s" class="animate__animated animate__fadeIn text-2xl">
+      To date, we have explored over 30 fascinating topics, from emotional intelligence and the morality of AI to cultural identity and the depletion of the human gene pool. Some of our most remarkable speakers have included top-level CEOs, ambassadors, and notably, Omar Hatamleh. Each edition stretches my mind to its limits, and the learning experience is among the most fulfilling things I’ve ever undertaken.
+    </p>
+  </div>
+  </div>
+</section>
+
   <section class="my-12">
     <div class="container">
-      <h2 class="text-3xl">Previous Debates</h2>
-      <ul class="my-8 space-y-6">
-        {previousDebates.map(debate => (
-          <li class="p-6 border rounded-lg shadow-lg">
-            <h3 class="text-2xl">{ debate.title }</h3>
-            <p class="text-lg">
-              Date: { debate.date } <br>
-              Time: { debate.time } <br>
-              Location: { debate.location }
-            </p>
-            <p class="text-lg">
-              { debate.description }
-            </p>
-          </li>
-        ))}
+      <h2 style = "animation-delay: 2.5s; animation-duration: 2s" class="animate__animated animate__fadeIn text-3xl">Previous Debates</h2>
+      <ul style = "animation-delay: 3.5s; animation-duration: 4s" class="animate__animated animate__fadeIn my-8 space-y-6">
+        <li class="p-6 border rounded-lg shadow-lg">
+          <h3 class="text-xl">Emotional Intelligence: Is it an innate ability or som
+          <p class="text-md">Exploring whether emotional intelligence is a natural trait that individuals are born with or a skill that can be cultivated and developed over time through experience and education.</p>
+        </li>
+        <li class="p-6 border rounded-lg shadow-lg">
+          <h3 class="text-xl">Positive Discrimination: Is it the solution for people at risk of exclusion?</h3>
+        </li>
+        <li class="p-6 border rounded-lg shadow-lg">
+          <h3 class="text-xl">COVID: The Death of Remote Work?</h3>
+        </li>
+        <li class="p-6 border rounded-lg shadow-lg">
+          <h3 class="text-xl">Democracy would work better if voting rights were proportional to taxation.</h3>
+        </li>
+        <li class="p-6 border rounded-lg shadow-lg">
+          <h3 class="text-xl">What is the best argument you know to support the idea that God exists?</h3>
+        </li>
+        <li class="p-6 border rounded-lg shadow-lg">
+          <h3 class="text-xl">Should Artificial Intelligence be heavily regulated, or should innovation be left unrestricted?</h3>
+        </li>
+        <li class="p-6 border rounded-lg shadow-lg">
+          <h3 class="text-xl">Where is God?</h3>
+        </li>
+        <li class="p-6 border rounded-lg shadow-lg">
+          <h3 class="text-xl">Is the Gaza war what Israel needed to justify its dominance in the region?</h3>
+        </li>
+        <li class="p-6 border rounded-lg shadow-lg">
+          <h3 class="text-xl">Is the radical right more dangerous than the radical left?</h3>
+        </li>
+        <li class="p-6 border rounded-lg shadow-lg">
+          <h3 class="text-xl">Constructive debate contributes more than proving one is right.</h3>
+        </li>
+        <li class="p-6 border rounded-lg shadow-lg">
+          <h3 class="text-xl">Is technology the main cause of increased loneliness?</h3>
+        </li>
+        <li class="p-6 border rounded-lg shadow-lg">
+          <h3 class="text-xl">Russia: Better to have her as a friend or as a foe?</h3>
+        </li>
+        <li class="p-6 border rounded-lg shadow-lg">
+          <h3 class="text-xl">Is it ethical for governments to use censorship to control misinformation, or does this violate freedom of expression?</h3>
+        </li>
+        <li class="p-6 border rounded-lg shadow-lg">
+          <h3 class="text-xl">Do weapons belong in space?</h3>
+        </li>
+        <li class="p-6 border rounded-lg shadow-lg">
+          <h3 class="text-xl">Everything happens for a reason. Discuss</h3>
+        </li>
+        <li class="p-6 border rounded-lg shadow-lg">
+          <h3 class="text-xl">Cognitive biases are more frequent in intelligent people. Discuss</h3>
+        </li>
+        <li class="p-6 border rounded-lg shadow-lg">
+          <h3 class="text-xl">Immigrants should adopt culturally to favor integration. For/against</h3>
+        </li>
+        <li class="p-6 border rounded-lg shadow-lg">
+          <h3 class="text-xl">Absolute reliability is an innate personality trait which cannot be learned as an adult.</h3>
+        </li>
+        <li class="p-6 border rounded-lg shadow-lg">
+          <h3 class="text-xl">Children should not be allowed mobile phones.</h3>
+        </li>
+        <li class="p-6 border rounded-lg shadow-lg">
+          <h3 class="text-xl">When one has a formed opinion on a subject, do debates add value?</h3>
+        </li>
+        <li class="p-6 border rounded-lg shadow-lg">
+          <h3 class="text-xl">What would you talk to about with an intelligent extraterrestrial?</h3>
+        </li>
+        <li class="p-6 border rounded-lg shadow-lg">
+          <h3 class="text-xl">Would a benevolent AGI augment or replace human capabilities?</h3>
+        </li>
+        <li class="p-6 border rounded-lg shadow-lg">
+          <h3 class="text-xl">To exist as a think tank, how can we best align our minds in a conversation to achieve a common intellect which surpasses our individual capabilities?</h3>
+        </li>
+        <li class="p-6 border rounded-lg shadow-lg">
+          <h3 class="text-xl">If (illegal) immigration is the problem, what is the solution?</h3>
+        </li>
+        <li class="p-6 border rounded-lg shadow-lg">
+          <h3 class="text-xl">Cultural identity recommendations we can give multicultural people.</h3>
+        </li>
+        <li class="p-6 border rounded-lg shadow-lg">
+          <h3 class="text-xl">Are there universal values?</h3>
+        </li>
+        <li class="p-6 border rounded-lg shadow-lg">
+          <h3 class="text-xl">The scientific method of reasoning is a useful default mindset for everyday life.</h3>
+        </li>
+        <li class="p-6 border rounded-lg shadow-lg">
+          <h3 class="text-xl">What is our purpose as a think tank.</h3>
+        </li>
+        <li class="p-6 border rounded-lg shadow-lg">
+          <h3 class="text-xl">This House Believes That Being Likeable Is More Important Than Being Right</h3>
+        </li>
+        <li class="p-6 border rounded-lg shadow-lg">
+          <h3 class="text-xl">This House believes that human progress has ensured our survival as a species but undermined our overall happiness.</h3>
+        </li>
       </ul>
     </div>
   </section>

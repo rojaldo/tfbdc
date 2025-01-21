@@ -1,0 +1,10 @@
+User-agent: *
+Disallow: /contact/
+
+User-agent: Googlebot
+Disallow: /contact/
+
+User-agent: Bingbot
+Disallow: /contact/
+
+Sitemap: https://www.francisbacondebate.org/sitemap.xml

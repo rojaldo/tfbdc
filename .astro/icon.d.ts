@@ -9729,7 +9729,7 @@ declare module 'virtual:astro-icon' {
 		| "mdi:wallet-bifold"
 		| "mdi:wallet-bifold-outline"
 		| "mdi:wallet-giftcard"
-		| "mdi:wallet-membership"
+		| "mdi:wallet-fellowship"
 		| "mdi:wallet-outline"
 		| "mdi:wallet-plus"
 		| "mdi:wallet-plus-outline"

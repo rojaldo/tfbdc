@@ -1,0 +1,13 @@
+/* TEAM */
+Site: https://www.francisbacondebate.org/
+Designer: Jan Farrell, Julia Niño, Daniel Rojo
+Developer: Daniel Rojo
+Contact: info@francisbacondebate.org
+
+/* THANKS */
+Thanks to all fellows from Francis Bacon Debate Society.
+
+/* SITE */
+Last update: 2024-12-29
+Standards: HTML5, CSS3
+Software: Visual Studio Code

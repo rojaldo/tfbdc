@@ -1,0 +1,518 @@
+---
+import DefaultLayout from '../../layouts/DefaultLayout.astro'
+import 'animate.css';
+
+export async function getStaticPaths({ paginate }) {
+  return paginate([], { pageSize: 1 })
+}
+
+const { page } = Astro.props
+---
+
+<DefaultLayout
+  title="About Us"
+  description="Learn more about The Francis Bacon Debate Society, our mission, history, and team."
+>
+<section class="my-12">
+  <div class="container">
+    <h1 style="animation-delay: 0.5s; animation-duration: 2s" class="animate__animated animate__fadeIn text-4xl font-bold mb-6">Fellowship</h1>
+    <p style="animation-delay: 1.5s; animation-duration: 4s" class="animate__animated animate__fadeIn text-lg mb-6">
+      Fellowship of The Francis Bacon Debate Society is currently by invitation only. We are not accepting new applications.
+    </p>
+    <p style="animation-delay: 1.5s; animation-duration: 4s" class="animate__animated animate__fadeIn text-lg mb-6">
+      If you are interested in assisting as a guest speaker, please <a href="/contact" style="text-decoration: underline;">contact us</a>.
+    </p>
+  </div>
+</section>
+
+<section class="my-12 py-12">
+  <div class="container">
+    <div class="mb-12">
+      <ul style="animation-delay: 2.5s; animation-duration: 2s" class="animate__animated animate__fadeIn list-none pl-0">
+        <li class="mb-8 flex items-center">
+          <div>
+            <h3 class="text-3xl font-bold mb-4">Honorary President</h3>
+            <p class="text-xl font-bold"><strong>Gerardo Seeliger</strong></p>
+            <p class="text-md"><strong>Madrid Open City President. Founder of Círculo para el Diálogo</strong></p>
+          </div>
+        </li>
+        <li class="mb-8 flex items-center">
+          <div>
+            <h3 class="text-3xl font-bold mb-4">President</h3>
+            <p class="text-xl font-bold"><strong>Jan Farrell</strong></p>
+            <p class="text-md"><strong>CEO</strong> at Liberalia Assistance & Brethil Investment</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div>
+        <h3 style="animation-delay: 3.5s; animation-duration: 4s" class="animate__animated animate__fadeIn text-3xl font-bold mb-4">Fellows</h3>
+        <ul style="animation-delay: 3.5s; animation-duration: 4s" class="animate__animated animate__fadeIn list-none pl-0">
+          <li class="mb-8 flex items-center">
+            <div>
+              <h3 class="text-xl font-bold">Caroline Sevier</h3>
+              <p class="text-md"><strong>Head of New Business</strong> at Airbus Defense and Space</p>
+            </div>
+          </li>
+          <li class="mb-8 flex items-center">
+            <div>
+              <h3 class="text-xl font-bold">Daniel Rojo</h3>
+              <p class="text-md"><strong>Senior Programmer</strong> at Formación</p>
+            </div>
+          </li>
+          <li class="mb-8 flex items-center">
+            <div>
+              <h3 class="text-xl font-bold">George Zachary</h3>
+              <p class="text-md"><strong>United Kingdom Liaison Prosecutor</strong> in Spain</p>
+            </div>
+          </li>
+          <li class="mb-8 flex items-center">
+            <div>
+              <h3 class="text-xl font-bold">Hadi Parvizi PhD</h3>
+              <p class="text-md"><strong>Reservoir Engineer Manager</strong> at Cepsa</p>
+            </div>
+          </li>
+          <li class="mb-8 flex items-center">
+            <div>
+              <h3 class="text-xl font-bold">Javier Masides</h3>
+              <p class="text-md"><strong>Enterprise Solutions</strong> at Phrase</p>
+            </div>
+          </li>
+          <li class="mb-8 flex items-center">
+            <div>
+              <h3 class="text-xl font-bold">María Torrente, PhD</h3>
+              <p class="text-md"><strong>Cardiologist, associate professor and Medical Writer</strong></p>
+            </div>
+          </li>
+          <li class="mb-8 flex items-center">
+            <div>
+              <h3 class="text-xl font-bold">Sebastián Laiseca</h3>
+              <p class="text-md"><strong>FCAS Director</strong> at Indra</p>
+            </div>
+          </li>
+          <li class="mb-8 flex items-center">
+            <div>
+              <h3 class="text-xl font-bold">Javier Masides</h3>
+              <p class="text-md"><strong>Enterprise Solutions</strong> at Phrase</p>
+            </div>
+          </li>
+          <li class="mb-8 flex items-center">
+            <div>
+              <h3 class="text-xl font-bold">Guillermo Moreno</h3>
+              <p class="text-md"><strong>Abogado Socio</strong> at Moreno Vlk & Asociados</p>
+            </div>
+          </li>
+          <li class="mb-8 flex items-center">
+            <div>
+              <h3 class="text-xl font-bold">Yeva Kupchyk</h3>
+              <p class="text-md"><strong>Engineer & Programmer</strong></p>
+            </div>
+          </li>
+          <li class="mb-8 flex items-center">
+            <div>
+              <h3 class="text-xl font-bold">Camelia Hamza</h3>
+              <p class="text-md"><strong>Compliance and Corporate legal counsel</strong> at X-ELIO</p>
+            </div>
+          </li>
+          <li class="mb-8 flex items-center">
+            <div>
+              <h3 class="text-xl font-bold">Jorge Vázquez Morenés</h3>
+              <p class="text-md"><strong>Director de Auto</strong> at Mutua Madrileña</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <h3 style="animation-delay: 3.5s; animation-duration: 4s" class="animate__animated animate__fadeIn text-3xl font-bold mb-4">Honorary Fellows</h3>
+        <ul style="animation-delay: 3.5s; animation-duration: 4s" class="animate__animated animate__fadeIn list-none pl-0">
+
+          <li class="mb-8 flex items-center">
+            <div>
+              <h3 class="text-xl font-bold">Dr. Manuel Leyes</h3>
+              <p class="text-md"><strong>Trauma surgeon, Head of Orthopaedic Departament</strong> at Olympia & at Hospital La Luz</p>
+            </div>
+          </li>
+          <li class="mb-8 flex items-center">
+            <div>
+              <h3 class="text-xl font-bold">H. E. Anna Sroka</h3>
+              <p class="text-md"><strong>Ambassador of Poland to Spain</strong> author and University Professor of Political Science</p>
+            </div>
+          </li>
+          <li class="mb-8 flex items-center">
+            <div>
+              <h3 class="text-xl font-bold">H. E. Dinesh Patnaik</h3>
+              <p class="text-md"><strong>Ambassador of India to Spain</strong></p>
+            </div>
+          </li>
+          <li class="mb-8 flex items-center">
+            <div>
+              <h3 class="text-xl font-bold">H. E. Enno Drofenik</h3>
+              <p class="text-md"><strong>Ambassador of Austria to Spain</strong></p>
+            </div>
+          </li>
+          <li class="mb-8 flex items-center">
+            <div>
+              <h3 class="text-xl font-bold">H. E. Hanspeter Mock</h3>
+              <p class="text-md"><strong>Ambassador of Switzerland to Spain </strong> </p>
+            </div>
+          </li>
+          <li class="mb-8 flex items-center">
+            <div>
+              <h3 class="text-xl font-bold">H. E. Libor Sečka</h3>
+              <p class="text-md"><strong>Ambassador of Czechia to Spain</strong></p>
+            </div>
+          </li>
+          <li class="mb-8 flex items-center">
+            <div>
+              <h3 class="text-xl font-bold">Omar Hatamleh</h3>
+              <p class="text-md"><strong>Chief AI Officer</strong></p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="my-12 py-12">
+    <div class="container">
+      <h2 style="animation-delay: 2.5s; animation-duration: 2s" class="animate__animated animate__fadeIn text-3xl font-bold mb-6">Attendees</h2>
+      <ul style="animation-delay: 3.5s; animation-duration: 4s" class="animate__animated animate__fadeIn list-none pl-0">
+        <li class="mb-8 flex items-center">
+          <div>
+            <h3 class="text-xl font-bold">Aayush Giri</h3>
+            <p class="text-md"><strong>Head of Shipping,</strong> at Cepsa</p>
+          </div>
+        </li>
+        <li class="mb-8 flex items-center">
+          <div>
+            <h3 class="text-xl font-bold">Aigin Ikder</h3>
+            <p class="text-md"><strong>EDI Researcher and consultant</strong> at Glasgow University</p>
+          </div>
+        </li>
+        <li class="mb-8 flex items-center">
+          <div>
+            <h3 class="text-xl font-bold">Alberto Galaso</h3>
+            <p class="text-md"><strong>Director General Nuevos Servicios</strong> de MASMOVIL, Director General PepePhone</p>
+          </div>
+        </li>
+        <li class="mb-8 flex items-center">
+          <div>
+            <h3 class="text-xl font-bold">Alexandra Crowe</h3>
+            <p class="text-md"><strong>Legal Affairs</strong> at Santander</p>
+          </div>
+        </li>
+        <li class="mb-8 flex items-center">
+          <div>
+            <h3 class="text-xl font-bold">Alfonso González</h3>
+            <p class="text-md"><strong>Subdirector General</strong> at Enalta</p>
+          </div>
+        </li>
+        <li class="mb-8 flex items-center">
+          <div>
+            <h3 class="text-xl font-bold">H. E. Anna Sroka</h3>
+            <p class="text-md"><strong>Excma. Embajadora de Polonia en España y Catedrática de Ciencias Políticas</strong></p>
+          </div>
+        </li>
+
+        <li class="mb-8 flex items-center">
+          <div>
+            <h3 class="text-xl font-bold">Carla Cudos</h3>
+            <p class="text-md"><strong>VP External Comms EU</strong> at Adecco Group</p>
+          </div>
+        </li>
+        <li class="mb-8 flex items-center">
+          <div>
+            <h3 class="text-xl font-bold">Carlos Ruiz de Assin</h3>
+            <p class="text-md"><strong>Senior Manager/Legal Counsel</strong> at Telefónica</p>
+          </div>
+        </li>
+        <li class="mb-8 flex items-center">
+          <div>
+            <h3 class="text-xl font-bold">Carmen Izquierdo</h3>
+            <p class="text-md"><strong>CEO at nTeaser & Presidenta</strong> at YEC</p>
+          </div>
+        </li>
+        <li class="mb-8 flex items-center">
+          <div>
+            <h3 class="text-xl font-bold">Cristina García</h3>
+            <p class="text-md"><strong>Head of Insurtech & eHealth</strong> at MASOrange</p>
+          </div>
+        </li>
+        <li class="mb-8 flex items-center">
+          <div>
+            <h3 class="text-xl font-bold">Euprepio Padula</h3>
+            <p class="text-md"><strong>TV host, owner</strong> Padula & Partners</p>
+          </div>
+        </li>
+        <li class="mb-8 flex items-center">
+          <div>
+            <h3 class="text-xl font-bold">Jaime Aguirre de Carcer</h3>
+            <p class="text-md"><strong>CEO</strong> at El Corte Inglés Seguros</p>
+          </div>
+        </li>
+
+        <li class="mb-8 flex items-center">
+          <div>
+            <h3 class="text-xl font-bold">Javier Badiola Bergara</h3>
+            <p class="text-md"><strong>Country Managing Partner</strong> at Dentons Spain</p>
+          </div>
+        </li>
+        <li class="mb-8 flex items-center">
+          <div>
+            <h3 class="text-xl font-bold">Javier Cabrerizo</h3>
+            <p class="text-md"><strong>CEO</strong> at Prosegur Alarms</p>
+          </div>
+        </li>
+
+        <li class="mb-8 flex items-center">
+          <div>
+            <h3 class="text-xl font-bold">Johann Šmůla</h3>
+            <p class="text-md"><strong>Physical Commodity Trading, Managing Director</strong> at GC Europe</p>
+          </div>
+        </li>
+        <li class="mb-8 flex items-center">
+          <div>
+            <h3 class="text-xl font-bold">Josep Elias</h3>
+            <p class="text-md"><strong>CEO y fundador Setric española SA - Rosa Planters Vietnam Ltd</strong> y esposa: Patricia Ferreira Da Silva</p>
+          </div>
+        </li>
+        <li class="mb-8 flex items-center">
+          <div>
+            <h3 class="text-xl font-bold">Juan Cumbrado</h3>
+            <p class="text-md"><strong>Director de Innovación</strong> at MAPFRE</p>
+          </div>
+        </li>
+        <li class="mb-8 flex items-center">
+          <div>
+            <h3 class="text-xl font-bold">Juliana Abella</h3>
+            <p class="text-md"><strong>Research and Analysis Director</strong> at S&P Global</p>
+          </div>
+        </li>
+        <li class="mb-8 flex items-center">
+          <div>
+            <h3 class="text-xl font-bold">Dr. Manuel Leyes</h3>
+            <p class="text-md"><strong>Trauma surgeon, Head of Orthopaedic Departament</strong> at Olympia & at Hospital La Luz</p>
+          </div>
+        </li>
+        <li class="mb-8 flex items-center">
+          <div>
+            <h3 class="text-xl font-bold">María Figueroa</h3>
+            <p class="text-md"><strong>HR Consultant | Talent Management I Carrer Development</strong> at Prinzipal Partner</p>
+          </div>
+        </li>
+
+
+        <li class="mb-8 flex items-center">
+          <div>
+            <h3 class="text-xl font-bold">Omar Hatamleh</h3>
+            <p class="text-md"><strong>Chief AI Officer</strong> </p>
+          </div>
+        </li>
+        <li class="mb-8 flex items-center">
+          <div>
+            <h3 class="text-xl font-bold">Rafael Suárez</h3>
+            <p class="text-md"><strong>Subdirector General, Desarrollo de Negocio No Vida</strong> at MAPFRE España</p>
+          </div>
+        </li>
+        <li class="mb-8 flex items-center">
+          <div>
+            <h3 class="text-xl font-bold">Robert Saint-Malo</h3>
+          </div>
+        </li>        <li class="mb-8 flex items-center">
+          <div>
+            <h3 class="text-xl font-bold">Sebastián Laiseca</h3>
+            <p class="text-md"><strong>FCAS Director</strong> at Indra</p>
+          </div>
+        </li>
+
+        <li class="mb-8 flex items-center">
+          <div>
+            <h3 class="text-xl font-bold">Tim Jejichen</h3>
+            <p class="text-md"><strong>CEO</strong> at Munich Re Spain</p>
+          </div>
+        </li>
+        <li class="mb-8 flex items-center">
+          <div>
+            <h3 class="text-xl font-bold">Víctor Alfaro</h3>
+            <p class="text-md"><strong>CEO</strong> Podoactiva</p>
+          </div>
+        </li>
+        <li class="mb-8 flex items-center">
+          <div>
+            <h3 class="text-xl font-bold">Yaukuma Armbruster</h3>
+            <p class="text-md"><strong>Partner Iberia</strong> at QCP Quantum Capital Partners</p>
+          </div>
+        </li>
+        <li class="mb-8 flex items-center">
+          <div>
+            <h3 class="text-xl font-bold">José del Barrio</h3>
+            <p class="text-md"><strong>Founder and Managing Partner</strong> at Samaipata VC</p>
+          </div>
+        </li>
+        <li class="mb-8 flex items-center">
+          <div>
+            <h3 class="text-xl font-bold">María Riesco</h3>
+            <p class="text-md"><strong>Ingeniera e Inspectora de Policía</strong> especializada en cibercrimen</p>
+          </div>
+        </li>
+        <li class="mb-8 flex items-center">
+          <div>
+            <h3 class="text-xl font-bold">Javier Sanz</h3>
+            <p class="text-md"><strong>CEO</strong> Grupo ADSLZone & BolsaZone</p>
+          </div>
+        </li>
+        <li class="mb-8 flex items-center">
+          <div>
+            <h3 class="text-xl font-bold">Jessica Shields</h3>
+            <p class="text-md"><strong>VP Global Business Services</strong> at Dexcom</p>
+          </div>
+        </li>
+        <li class="mb-8 flex items-center">
+          <div>
+            <h3 class="text-xl font-bold">Valéria Da Silva</h3>
+            <p class="text-md"><strong>Psicoterapeuta</strong> en autoconocimiento</p>
+          </div>
+        </li>
+        <li class="mb-8 flex items-center">
+          <div>
+            <h3 class="text-xl font-bold">Philipp Braukmann</h3>
+            <p class="text-md"><strong>Consultant</strong> @Apricum – The Cleantech Advisory</p>
+          </div>
+        </li>
+        <li class="mb-8 flex items-center">
+          <div>
+            <h3 class="text-xl font-bold">Roberto Saint-Malo</h3>
+            <p class="text-md"><strong>VC Practitioner</strong></p>
+          </div>
+        </li>
+        <li class="mb-8 flex items-center">
+          <div>
+            <h3 class="text-xl font-bold">Gui Silva</h3>
+            <p class="text-md"><strong>General Manager</strong> at JTI Iberia</p>
+          </div>
+        </li>
+        <li class="mb-8 flex items-center">
+          <div>
+            <h3 class="text-xl font-bold">Aurelia Silva</h3>
+            <p class="text-md"><strong>in transition from COO</strong> at Eticas (responsible AI)</p>
+          </div>
+        </li>
+        <li class="mb-8 flex items-center">
+          <div>
+            <h3 class="text-xl font-bold">Julián Mármol</h3>
+            <p class="text-md"><strong>Chef 1* Michelin</strong> at Yugo the Bunker y Ocasan</p>
+          </div>
+        </li>
+        <li class="mb-8 flex items-center">
+          <div>
+            <h3 class="text-xl font-bold">Joaquín de los Reyes</h3>
+            <p class="text-md"><strong>Business Development Manager</strong> at MAPFRE</p>
+          </div>
+        </li>
+        <li class="mb-8 flex items-center">
+          <div>
+            <h3 class="text-xl font-bold">Ángel Baena</h3>
+            <p class="text-md"><strong>CEO</strong> at Cardieval Wines</p>
+          </div>
+        </li>
+        <li class="mb-8 flex items-center">
+          <div>
+            <h3 class="text-xl font-bold">Javier Baixas</h3>
+            <p class="text-md"><strong>Insurance & Customer Partner</strong> at PwC</p>
+          </div>
+        </li>
+        <li class="mb-8 flex items-center">
+          <div>
+            <h3 class="text-xl font-bold">Juan Milagro</h3>
+            <p class="text-md"><strong>Socio Fundador</strong> at Mavens Abogados</p>
+          </div>
+        </li>
+        <li class="mb-8 flex items-center">
+          <div>
+            <h3 class="text-xl font-bold">Elda Benítez-Inglott Bellini</h3>
+            <p class="text-md"><strong>Human Resources Director & Partner</strong> at PwC Spain</p>
+          </div>
+        </li>
+        <li class="mb-8 flex items-center">
+          <div>
+            <h3 class="text-xl font-bold">Peter Bryant</h3>
+            <p class="text-md"><strong>Adjunct Professor</strong> at IE Business School</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+</DefaultLayout>
+
+<style lang="scss">
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.bg-gray-100 {
+  background-color: #f7fafc;
+}
+
+.text-4xl {
+  font-size: 2.25rem;
+}
+
+.text-3xl {
+  font-size: 1.875rem;
+}
+
+.text-xl {
+  font-size: 1.25rem;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.mb-6 {
+  margin-bottom: 1.5rem;
+}
+
+.mb-8 {
+  margin-bottom: 2rem;
+}
+
+.my-12 {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.w-24 {
+  width: 6rem;
+}
+
+.h-24 {
+  height: 6rem;
+}
+
+.rounded-full {
+  border-radius: 9999px;
+}
+
+.mr-4 {
+  margin-right: 1rem;
+}
+
+.flex {
+  display: flex;
+}
+
+.items-center {
+  align-items: center;
+}
+</style>

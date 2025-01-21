@@ -1,5 +1,7 @@
 ---
 import DefaultLayout from '../../layouts/DefaultLayout.astro'
+import 'animate.css';
+
 
 export async function getStaticPaths({ paginate }) {
   return paginate([], { pageSize: 1 })
@@ -14,39 +16,26 @@ const { page } = Astro.props
 >
   <section class="my-12">
     <div class="container">
-      <h1 class="text-4xl font-bold mb-6">About Us</h1>
-      <p class="text-lg mb-6">
-        The Francis Bacon Society is a space where the brightest minds from various fields come together to deliberate on important topics that have a purpose and lasting impact. Our society is composed of lawyers, ambassadors, scientists, entrepreneurs, senior executives, creatives, investors, philosophers, deans, and politicians, all united by a common goal: to find pragmatic solutions and chart a path of collective thinking.
+      <h1 style = "animation-delay: 0.5s; animation-duration: 2s" class="animate__animated animate__fadeIn text-4xl font-bold mb-6">About Us</h1>
+      <p style = "animation-delay: 1.5s; animation-duration: 2s" class="animate__animated animate__fadeIn text-lg mb-6 p-4 rounded-lg shadow-md border-2 border-white-500">
+        <span style="font-weight: bold; font-style: italic; font-family: 'Times New Roman', Times, serif; display: block; margin-bottom: 0.5rem; font-size: 1.5rem;">Sic parvis magna</span>
+        "There must be a beginning of any great matter, but the continuing unto the end, until it be thoroughly finished, yields the true glory."
       </p>
-    </div>
-  </section>
-  <section class="my-12  py-12">
-    <div class="container">
-      <h2 class="text-3xl font-bold mb-6">How Do We Do It?</h2>
-      <p class="text-lg mb-6">
-        Through collaboration and the exchange of knowledge, our group of experts uses individual talent to achieve a superior collective intellect. We challenge ourselves and our limits, always seeking to provide valuable conclusions to society.
+      <p style = "animation-delay: 2.5s; animation-duration: 2s" class="animate__animated animate__fadeIn text-lg mb-6">
+        We are a private association of diverse individuals united by a shared objective: fostering curiosity and introspection.
       </p>
-    </div>
-  </section>
-  <section class="my-12">
-    <div class="container">
-      <h2 class="text-3xl font-bold mb-6">Why Do We Do It?</h2>
-      <p class="text-lg mb-6">
-        To enhance our personal and collective intelligence and to offer society innovative and valuable solutions. We want our logo to inspire the use of the brain to challenge oneself and others, promoting critical and deep thinking.
+      <p style = "animation-delay: 2.5s; animation-duration: 2s" class="animate__animated animate__fadeIn text-lg mb-6">
+        Our society was born with a simple yet powerful purpose: to infuse greater meaning into conversations and discussions. This debate society evolved from what began in 2008 as a laid-back dining club—a gathering where I sought to challenge my culinary skills and enjoy gastronomic experiences with my friends. In 2023, driven by a desire to deepen our discourse, we began planning our conversations in advance. Thus, we commenced directing discussions, which naturally gravitated towards meaningful topics, frequently leading to thought-provoking debates and intellectually stimulating exchanges.
       </p>
-    </div>
-  </section>
-  <section class="my-12  py-12">
-    <div class="container">
-      <h2 class="text-3xl font-bold mb-6">Our History</h2>
-      <p class="text-lg mb-6">
-        Founded in the year 2024, The Francis Bacon Debate Society stands as a beacon of intellectual discourse and the free exchange of ideas. Our society is dedicated to fostering a culture of rigorous debate, critical thinking, and eloquent expression.
+      <p style = "animation-delay: 2.5s; animation-duration: 2s" class="animate__animated animate__fadeIn text-lg mb-6">
+        The concept evolved swiftly into structured and moderated debates. Over time, we experimented with various formats—different seating arrangements, group sizes, and the balance between think-tank discussions and formal debates. Today, we host Oxford Union-style debates paired with formal dinners, conducted under the Chatham House Rule. This confidentiality framework protects our members’ and guest speakers’ views and opinions while allowing us to share collective conclusions. 
       </p>
-      <p class="text-lg mb-6">
-        At the heart of our society lies a commitment to the highest values in debating. We believe that through respectful and informed debate, individuals can broaden their perspectives, challenge their preconceptions, and contribute to the collective wisdom of our community.
+      <p style = "animation-delay: 2.5s; animation-duration: 2s" class="animate__animated animate__fadeIn text-lg mb-6">
+        However, our purpose remains unchanged: to gather once a month with an open mind, a willingness to listen, and a determination to build upon the ideas of our peers—ultimately striving to surpass our individual intellects through collective deliberation.
       </p>
-      <p class="text-lg mb-6">
-        Our members are encouraged to engage in thoughtful discussions on a wide range of topics, from contemporary issues to timeless philosophical questions. We uphold the principles of integrity, respect, and intellectual curiosity in all our endeavours.
+        
+      <p style = "animation-delay: 2.5s; animation-duration: 2s" class="animate__animated animate__fadeIn text-lg mb-6">
+        Our patron, Sir Francis Bacon, Viscount St Alban, was a British philosopher, lawyer, politician, and concealed poet. Renowned as one of the last and greatest Renaissance men, Bacon is credited with the development of empiricism and the scientific method—principles that resonate deeply with the logical deliberations of our society.
       </p>
     </div>
   </section>
